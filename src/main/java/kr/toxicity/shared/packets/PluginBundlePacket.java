@@ -1,5 +1,7 @@
 package kr.toxicity.shared.packets;
 
+import net.kyori.adventure.key.Key;
+import net.kyori.adventure.key.Keyed;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
@@ -8,13 +10,7 @@ import java.util.Iterator;
  * Bundle packet for custom plugin.
  * @param <T> packet type
  */
-public interface PluginBundlePacket<T> extends Iterable<T> {
-
-    /**
-     * Gets vendor name
-     * @return vendor
-     */
-    @NotNull String vendor();
+public interface PluginBundlePacket<T> extends Iterable<T>, Keyed {
 
     /**
      * Creates a bundle packet from some iterable object
@@ -23,10 +19,10 @@ public interface PluginBundlePacket<T> extends Iterable<T> {
      * @return packets
      * @param <T> packets
      */
-    static <T> @NotNull PluginBundlePacket<T> of(@NotNull String vendor, @NotNull Iterable<T> iterable) {
+    static <T> @NotNull PluginBundlePacket<T> of(@NotNull Key vendor, @NotNull Iterable<T> iterable) {
         return new PluginBundlePacket<>() {
             @Override
-            public @NotNull String vendor() {
+            public @NotNull Key key() {
                 return vendor;
             }
 

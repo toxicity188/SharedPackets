@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "kr.toxicity.shared.packets"
-version = "1.0"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -14,6 +14,7 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("org.jetbrains:annotations:26.0.2")
+    implementation("net.kyori:adventure-api:4.23.0")
 }
 
 tasks {

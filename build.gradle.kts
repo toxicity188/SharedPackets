@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "kr.toxicity.shared.packets"
+group = "kr.toxicity.library.sharedpackets"
 version = "1.0.0"
 
 repositories {

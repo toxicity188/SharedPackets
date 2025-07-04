@@ -1,4 +1,4 @@
-package kr.toxicity.shared.packets;
+package kr.toxicity.library.sharedpackets;
 
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.key.Keyed;
